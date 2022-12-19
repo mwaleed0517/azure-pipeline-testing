@@ -22,6 +22,9 @@ steps:
 - script: |
     yarn build
   displayName: 'yarn build'
+
+- script: ls
+  displayName: 'Display files'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: 'build'
