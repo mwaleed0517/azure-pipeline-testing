@@ -22,3 +22,9 @@ steps:
 - script: |
     yarn build
   displayName: 'yarn build'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'build'
+    ArtifactName: 'build'
+    publishLocation: 'Container'
+  displayName: 'Publish production build'
